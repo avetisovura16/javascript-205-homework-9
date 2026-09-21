@@ -30,12 +30,14 @@ console.log("total:", total);
 
 
 // The names of the veggie dishes
+// you need to use === instead of = because = means rewriting the value 
 const veggie = bill.filter(item => item.veg === true).map(item => item.dish);
 console.log("veggie:", veggie);
 
 
 // How much does Mtsvadi cost?
 const mtsvadi = bill.filter(item => item.dish === "Mtsvadi");
+// mtsvadi is an object , it doesnt have any "price" , you need to ask a price for a dish , dish is the first ellement in this object , so you need to ask a price of [0] element
 console.log("Mtsvadi costs:", mtsvadi[0].price);
 
 
